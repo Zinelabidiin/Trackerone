@@ -1,0 +1,27 @@
+// Source - https://stackoverflow.com/a/78591693
+// Posted by Larissa Sartori
+// Retrieved 2026-08-12, License - CC BY-SA 4.0
+
+    {
+  "version": 2,
+  "builds": [
+    {
+      "src": "trackphone-dashboard-fr_1.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "styles/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "scripts/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/trackphone-dashboard-fr_1.html"
+    }
+  ]
+}

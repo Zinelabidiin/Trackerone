@@ -1,0 +1,1 @@
+ALTER TABLE `triviaProfiles` ADD `bestScore` int DEFAULT 0 NOT NULL;

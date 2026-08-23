@@ -1,0 +1,68 @@
+{
+  "expo": {
+    "name": "My Trivia Hub",
+    "slug": "trackerone-mobile",
+    "version": "1.8.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "icon": "./assets/icon.png",
+    "scheme": "mytriviahub",
+    "android": {
+      "package": "com.trackerone.mobile",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_LOCATION"
+      ],
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": false,
+          "data": [
+            { "scheme": "https", "host": "trackdash-hxav5snp.manus.space", "pathPrefix": "/invite" },
+            { "scheme": "mytriviahub", "host": "invite" }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ],
+      "adaptiveIcon": {
+        "backgroundColor": "#0F0F0F",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.trackerone.mobile",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSLocationWhenInUseUsageDescription": "My Trivia Hub utilise votre position uniquement après votre accord pour synchroniser votre appareil avec le tableau de bord familial.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "My Trivia Hub utilise votre position en arrière-plan uniquement après votre accord pour maintenir la synchronisation du téléphone.",
+        "UIBackgroundModes": ["location"]
+      }
+    },
+    "plugins": [
+      "expo-secure-store",
+      "expo-task-manager",
+      "./plugins/withAndroidNativeCapabilities",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "My Trivia Hub utilise votre position uniquement après votre accord pour synchroniser votre appareil avec le tableau de bord familial.",
+          "locationAlwaysAndWhenInUsePermission": "My Trivia Hub utilise votre position en arrière-plan uniquement après votre accord pour maintenir la synchronisation du téléphone.",
+          "isIosBackgroundLocationEnabled": true,
+          "isAndroidBackgroundLocationEnabled": true
+        }
+      ]
+    ],
+    "extra": {
+      "apiBaseUrl": "https://trackdash-hxav5snp.manus.space",
+      "eas": { "projectId": "a294cd03-000c-40fb-972d-cffda07cd328" }
+    },
+    "owner": "carboniums-team"
+  }
+}

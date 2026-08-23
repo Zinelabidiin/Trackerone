@@ -1,0 +1,28 @@
+# Dependencies and generated build output
+node_modules/
+dist/
+build/
+.expo/
+android/
+ios/
+
+# Runtime files, generated artifacts, and local logs
+.manus-logs/
+storage/
+*.apk
+*.aab
+*.ipa
+*.jks
+*.keystore
+
+# Secrets and local environment configuration
+.env
+.env.*
+!.env.example
+credentials.json
+
+# Local operating-system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

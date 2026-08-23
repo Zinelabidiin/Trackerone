@@ -395,6 +395,6 @@
 
 ## Repository export
 
-- [ ] Verify the intended trackerone repository and branch
-- [ ] Prepare a complete, secret-safe project export without generated dependencies
-- [ ] Upload the prepared project after explicit confirmation of the target repository
+- [x] Verify the intended trackerone repository and branch
+- [x] Prepare a complete, secret-safe project export without generated dependencies
+- [x] Upload the prepared project after explicit confirmation of the target repository
